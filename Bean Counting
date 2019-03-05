@@ -1,3 +1,4 @@
+My Answer:
 function countBs(word){
   let count = 0
   let x = String(word);
@@ -16,6 +17,26 @@ function countChar(word, letter){
   }
       return count;
   }
+
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
+
+Answer:
+function countChar(word, letter){
+  let count = 0
+  let x = String(word);
+  for (let i = 0; i < x.length; i++){
+    if (x[i] === letter)
+      count += 1;
+  }
+      return count;
+  }
+function countBs(word){
+  return countChar(word, "B");
+}
 
 
 console.log(countBs("BBC"));
