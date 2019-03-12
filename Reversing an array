@@ -1,0 +1,25 @@
+function reverseArray(arr){
+  let x= [];
+  for (let i = arr.length - 1; i >= 0; i--){
+    x.push(arr[i]);
+ }
+return x;
+}
+function reverseArrayInPlace(arrayValue){
+  for (var i = 0; i <= Math.floor(arrayValue.length / 2); i++){ 
+  // loops through half of the array excluding the middle element
+    let originalArray = arrayValue[i];
+    // stores previous array
+    arrayValue[i] = arrayValue[arrayValue.length - 1 - i]; 
+    // swaps the first half of the elements with their mirrored element in the second half
+    arrayValue[arrayValue.length - 1 - i] = x 
+    // swaps the second half of the elements with their mirrored element in the first half
+  }
+return arrayValue;
+}
+console.log(reverseArray(["A", "B", "C"]));
+// → ["C", "B", "A"];
+let arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+// → [5, 4, 3, 2, 1]
